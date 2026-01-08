@@ -34,3 +34,14 @@ print name, age, gender, dob
 add key value pair pincode into dictionary 
 add key value pair to store your 5 favourite touriest destination 
 print all the favourite touriest destination 
+
+use update method to add new key value pair in dictionary
+use update method to change existing key value pair in dictionary
+use pop method to remove dob 
+use popitem item method to remove last item 
+
+display all keys
+display all values 
+
+copy dictionary to another dictionary using copy function 
+clear newly create dictionary. 
