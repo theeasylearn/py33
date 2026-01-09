@@ -46,7 +46,6 @@ display all values
 copy dictionary to another dictionary using copy function 
 clear newly create dictionary. 
 
-
 #write a program to convert given 3 digit amount into words
 # input : 175 output : one seven five 
 
