@@ -139,6 +139,16 @@ do operation and display result as per user choice about operation using if elif
     Capricorn: December 22–January 19
     Aquarius: January 20–February 18
     Pisces: February 19–March 20
+5) write a program to findout day of week(monday/tuesday/wednesday) from given date.  
+    https://www.wikihow.com/Calculate-the-Day-of-the-Week
+
+6) Create a program that checks how compatible two people are for marriage based on their zodiac signs.
+
+Ask for the male's birth day (example: 15)
+Ask for the male's birth month (example: 3 for March)
+Ask for the female's birth day (example: 22)
+Ask for the female's birth month (example: 7 for July)
+
 
 Find their zodiac signs:
 Use the birth day and month to determine each person's zodiac sign
