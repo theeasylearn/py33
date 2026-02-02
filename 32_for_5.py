@@ -1,8 +1,12 @@
 #write a program to count vowels in given string using for loop
-line = input("What is your name?")
-vowels = ['a','e','i','o','u']
+#a e i o u 
+name = input("What is your name?")
+name = name.lower() #convert and return string in lowercase
 count = 0
-for letter in line:
-    if str.lower(letter) in vowels:
-        count = count + 1
+vowels = ['a','e','i','o','u']
+for letter in name: #divya
+    if letter in vowels:
+        count=count+1
+    # print(letter,end=' ')
+
 print(count)
