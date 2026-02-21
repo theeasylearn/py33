@@ -33,4 +33,209 @@ syntax
 How to remove all row from table and reset primary key?
 truncate table <tablename>
 truncate table products
+----------------------------------------------------------------------------------------------
+How to update existing row into table?
+syntax 
+update <tablename> set <fieldname=value> [condition]
 
+Examples 
+    Question : - update all product increase price by 1.99 rupees 
+    update products set price=price+1.99
+
+    Question : update product set its price to 99 55 whose product id is 1 
+    update products set price = 99 where id = 1
+
+
+    Question : update product set its name to "Bharat Pencil" brand "india" price 50 rupees of those product whose product code is PNCL1001
+    update products set name="Bharat Pencil",brand="India",price=50 where product_code='PNCL1001'
+How to rename table?
+    rename table <tablename> to <newtablename>
+    rename table products to product
+
+How to delete table?
+    drop table <tablename>
+    drop table product
+
+How to Fetch Data from table?
+------------------------------------------------------------------------------
+syntax 
+SELECT *| column_list FROM table_name [WHERE condition] [GROUP BY column_name] [HAVING condition] [ORDER BY column_name] [ASC|DESC LIMIT number];
+
+
+1. Select all fields and all rows from customers table
+   SQL:
+
+2. Select customerNumber, customerName, city, state, country of all customers from customers table
+   SQL:
+
+3. Select first 50 customers' name, city, state and country from customers
+   SQL:
+
+4. Select next 50 customers' name, city, state and country from customers
+   SQL:
+
+5. Select next 100 customers' name, city, state and country from customers
+   SQL:
+
+Display data in specific order
+
+6. Select customerNumber, customerName, city, state, country of all customers from customers table in name wise ascending order
+   SQL:
+
+7. Select customerNumber, customerName, city, state, country of all customers from customers table country wise, then state wise and then city wise in ascending order
+   SQL:
+
+8. Select customerNumber, customerName, city, state, country, creditLimit of all customers from customers table creditLimit wise in descending order
+   SQL:
+
+Filter data (fetch data as per conditions)
+
+9. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA
+   SQL:
+
+10. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose city is Boston
+    SQL:
+
+11. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France
+    SQL:
+
+12. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France or Australia or Japan
+    SQL:
+
+13. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is between 100000 to 999999
+    SQL:
+
+14. Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is San Francisco
+    SQL:
+
+15. Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is Delhi
+    SQL:
+
+16. Select unique country from customers table and display it in ascending order
+    SQL:
+
+17. Select customerNumber, customerName, city, state, country, creditLimit of those customers who are not from USA, France, Australia, Japan and display them in ascending order of country name
+    SQL:
+
+---
+
+Aggregate function
+
+Function that works upon numeric field and returns single value is called Aggregate function.
+
+sum()
+sum function returns the sum of given numeric field
+
+avg()
+avg function returns the average of given numeric field
+
+min()
+min() function returns the minimum value of given field
+
+max()
+max() function returns the maximum value of given field
+
+count()
+count() function counts number of rows in table
+
+18. Fetch total payment amount from payments
+    SQL:
+
+19. Fetch minimum and maximum amount from payments
+    SQL:
+
+20. Fetch average payment amount from payments
+    SQL:
+
+21. Count number of customers
+    SQL:
+
+Let us use Aggregate function with where clause
+
+22. Fetch count of customers who are from USA
+    SQL:
+
+23. Fetch total payment amount of customers whose customerNumber is 112
+    SQL:
+
+24. Fetch total payment amount received in year 2004
+    SQL:
+
+25. Fetch average payment amount of customer whose customerNumber is 114
+    SQL:
+
+Group By
+
+Group by clause is used to calculate result for Aggregate function based upon repetitive value of specific field.
+
+Group by clause is used along with Aggregate function. It returns subtotal on repetitive value of the specific field.
+
+26. Fetch total payments amount for each and every customer
+    SQL:
+
+27. Fetch number of payments received by each and every customer
+    SQL:
+
+28. Fetch maximum payment amount received by each and every customer
+    SQL:
+
+29. Fetch customer wise total payment amount
+    SQL:
+
+30. Fetch customer wise number of payments made
+    SQL:
+
+31. Fetch country name and number of customers from each country
+    SQL:
+
+Having clause
+
+Having clause is used only when we need to give condition on value returned by group by clause. So it means having clause is used only when we use group by clause.
+
+32. Fetch customer wise total payment amount of those customers whose total payment amount is above 1 lakh
+    SQL:
+
+33. Fetch customer wise number of payments made of those customers who have made more than 3 payments
+    SQL:
+
+34. Fetch country name and number of customers from each country where there are more than 5 customers
+    SQL:
+
+JOINS
+
+SQL Join is used to fetch and display data from multiple tables in single select statement
+
+35. Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise ascending order
+    SQL:
+
+36. Fetch customerNumber, customerName, city, state, country and paymentDate, amount of each and every customer and display them payment date wise
+    SQL:
+
+37. Fetch productCode, productName, quantityOrdered, priceEach, orderNumber, orderDate, status of each and every order
+    SQL:
+
+Working upon date fields
+
+38. Select customerNumber, paymentDate, amount of those payments which is received on 10-Feb-2004
+    SQL:
+
+39. Select customerNumber, paymentDate, amount of those payments which is received in February 2004
+    SQL:
+
+40. Select customerNumber, paymentDate, amount of those payments which is received in 2004
+    SQL:
+
+41. Fetch employee details of those employees who do not have reporting manager
+    SQL:
+
+42. Fetch employee details of those employees who have reporting manager
+    SQL:
+
+43. Fetch customerNumber, customerName of those customers which has word wheels
+    SQL:
+
+44. Fetch customerNumber, customerName of those customers which has word wheels at beginning
+    SQL:
+
+45. Fetch customerNumber, customerName of those customers which has word wheels at ending
+    SQL:
