@@ -1,0 +1,36 @@
+HOW TO INSERT ROW?
+
+insert into 
+-----------------------------
+insert into  products VALUES (NULL,'PNCL1001','Dark pencil','good for drawing','Stationery','Natraj',100,80,1000,50.99,1,'2025-12-15',0)
+
+insert into  products VALUES (NULL,'NTBK1003','NoteBook 2','200 page 100 GSM noot book','Stationery','Navneet',50,40,2000,70.29,1,'2025-06-30',NOW())
+
+2ND syntax 
+----------------
+insert into products (product_code,name,description,category,brand,price,cost_price,weight) values ('BLPN1004','Rotomac Ballpen','dark blue pen','Stationery','Rotomac',25,15,29.25)
+
+
+HOW TO DELETE ROW?
+syntax 
+    delete from <tablename> [<condition>]
+1) delete all row from table 
+    delete from products 
+
+2) delete specific row from table 
+   Question : delete those row whose product id is 1 
+   SQL : delete from products where id = 1 
+
+   Question : delete those row whose product id in range of 10 to 20
+   SQL : delete from products where id >= 10 and id <= 20
+ 
+   Question : delete those row from product table of Navneet brand 
+   SQL : delete from products where brand = 'Navneet'
+   
+   Question : delete those row from product table of whose product_code is PRD0001 or PRD0002
+   SQL : delete from products where product_code='PRD0001' or product_code='PRD0002'
+
+How to remove all row from table and reset primary key?
+truncate table <tablename>
+truncate table products
+
