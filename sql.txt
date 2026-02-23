@@ -59,34 +59,34 @@ How to delete table?
 How to Fetch Data from table?
 ------------------------------------------------------------------------------
 syntax 
-SELECT *| column_list FROM table_name [WHERE condition] [GROUP BY column_name] [HAVING condition] [ORDER BY column_name] [ASC|DESC LIMIT number];
+SELECT * | column_list FROM table_name [WHERE condition] [GROUP BY column_name] [HAVING condition] [ORDER BY column_name] [ASC|DESC LIMIT number];
 
 
-1. Select all fields and all rows from customers table
-   SQL:
+1     Select all fields and all rows from customers table
+    SQL:  select * from customers   
 
 2. Select customerNumber, customerName, city, state, country of all customers from customers table
-   SQL:
+   SQL: select customerNumber, customerName, city, state, country from customers 
 
 3. Select first 50 customers' name, city, state and country from customers
-   SQL:
+   SQL: select customerName, city, state, country from customers limit 0,50
 
 4. Select next 50 customers' name, city, state and country from customers
-   SQL:
+   SQL: select customerName, city, state, country from customers limit 50,50
 
 5. Select next 100 customers' name, city, state and country from customers
-   SQL:
+   SQL: select customerName, city, state, country from customers limit 100,100
 
 Display data in specific order
 
 6. Select customerNumber, customerName, city, state, country of all customers from customers table in name wise ascending order
-   SQL:
+   SQL: Select customerNumber, customerName, city, state, country from customers order by customerName; 
 
 7. Select customerNumber, customerName, city, state, country of all customers from customers table country wise, then state wise and then city wise in ascending order
-   SQL:
+   SQL: Select customerNumber, customerName, city, state, country from customers order by country, state, city 
 
 8. Select customerNumber, customerName, city, state, country, creditLimit of all customers from customers table creditLimit wise in descending order
-   SQL:
+   SQL: Select customerNumber, customerName, city, state, country from customers order by creditLimit desc 
 
 Filter data (fetch data as per conditions)
 
