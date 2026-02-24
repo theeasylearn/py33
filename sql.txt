@@ -91,31 +91,38 @@ Display data in specific order
 Filter data (fetch data as per conditions)
 
 9. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA
-   SQL:
+   SQL: select customerNumber, customerName, city, state, country, creditLimit from customers where country='USA'
 
-10. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose city is Boston
-    SQL:
+10. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is below 500000, display them creditLimit limit wise ascending order 
+    SQL: select customerNumber, customerName, creditLimit, city, state, country from customers where creditLimit<500000 order by creditLimit
 
-11. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France
-    SQL:
+11. Select customerNumber, customerName, country of those customers whose country is USA or France
+    SQL:  Select customerNumber, customerName, country from customers where country='USA' or country='France'
 
 12. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France or Australia or Japan
-    SQL:
+    SQL: Select customerNumber, customerName, country from customers where country='USA' or country='France' or country='Australia' or country='Japan'
+
+OR 
+
+    SQL: Select customerNumber, customerName, country from customers where country in ('usa','france','Australia','Japan')
 
 13. Select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is between 100000 to 999999
-    SQL:
+    SQL: select customerNumber,customerName,city,state,country,creditLimit from customers where creditLimit>100000 and creditLimit<999999
+
+OR 
+SQL :  select customerNumber,customerName,city,state,country,creditLimit from customers where creditLimit between 100000 and 999999
 
 14. Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is San Francisco
-    SQL:
+    SQL: Select customerNumber, customerName, city, state, country, creditLimit from customers where country = 'usa' and state = 'ca' and city='San Francisco' 
 
 15. Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is Delhi
-    SQL:
+    SQL : Select customerNumber, customerName, city, state, country, creditLimit from customers where country = 'USA' and state ='ca' and city = 'delhi' 
 
 16. Select unique country from customers table and display it in ascending order
-    SQL:
+    SQL: select country from customers
 
 17. Select customerNumber, customerName, city, state, country, creditLimit of those customers who are not from USA, France, Australia, Japan and display them in ascending order of country name
-    SQL:
+    SQL: Select customerNumber, customerName, country from customers where country not in ('usa','france','Australia','Japan') order by country 
 
 ---
 
