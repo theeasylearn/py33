@@ -146,30 +146,37 @@ count()
 count() function counts number of rows in table
 
 18. Fetch total payment amount from payments
-    SQL:
+    SQL: select sum(amount) as total from payments
 
 19. Fetch minimum and maximum amount from payments
-    SQL:
+    SQL: select min(amount) as minimum_amount, max(amount) as maximum_amount from payments 
 
 20. Fetch average payment amount from payments
-    SQL:
+    SQL: select avg(amount) as average_amount from payments 
+    SQL: select round(avg(amount),2) as average_amount from payments 
 
 21. Count number of customers
-    SQL:
+    SQL: select count(*) 'total_customers' from customers
 
 Let us use Aggregate function with where clause
 
 22. Fetch count of customers who are from USA
-    SQL:
+    SQL: select count(*) from customers where country='usa'
 
 23. Fetch total payment amount of customers whose customerNumber is 112
-    SQL:
+    SQL:  select sum(amount) as total from payments where customerNumber=112
 
 24. Fetch total payment amount received in year 2004
-    SQL:
+    SQL: select sum(amount) as total from payments where left(paymentDate,4) = '2004'
+
+    OR 
+    select sum(amount) as total from payments where paymentDate>='2004-01-01' and paymentDate<='2004-12-31'
+
+    OR 
+    select sum(amount) as total from payments where year(paymentDate) = 2004
 
 25. Fetch average payment amount of customer whose customerNumber is 114
-    SQL:
+    SQL: select avg(amount) from payments where customerNumber = 114
 
 Group By
 
@@ -177,23 +184,23 @@ Group by clause is used to calculate result for Aggregate function based upon re
 
 Group by clause is used along with Aggregate function. It returns subtotal on repetitive value of the specific field.
 
-26. Fetch total payments amount for each and every customer
-    SQL:
+26. Fetch total payments amount paid by each and every customer
+    SQL: select sum(amount) from customers group by customerNumber
 
 27. Fetch number of payments received by each and every customer
-    SQL:
+    SQL: select customerNumber,count(*) from payments  group by customerNumber
 
 28. Fetch maximum payment amount received by each and every customer
-    SQL:
+    SQL: select customerNumber,max(amount) from payments group by customerNumber
 
-29. Fetch customer wise total payment amount
-    SQL:
+29. Fetch no of customers from each country 
+    SQL: select country,count(*) from customers group by country
 
-30. Fetch customer wise number of payments made
-    SQL:
+30. Fetch no of orders given by each and every customers & display them in descending order 
+    SQL: select count(*),customerNumber from orders group by customerNumber order by count(*) desc
 
-31. Fetch country name and number of customers from each country
-    SQL:
+31. Fetch no of employees in each office 
+    SQL: select officecode,count(*) from employees group by officecode
 
 Having clause
 
