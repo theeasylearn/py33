@@ -207,17 +207,17 @@ Having clause
 Having clause is used only when we need to give condition on value returned by group by clause. So it means having clause is used only when we use group by clause.
 
 32. Fetch customer wise total payment amount of those customers whose total payment amount is above 1 lakh
-    SQL:
+    SQL: select customerNumber,sum(amount) from payments group by customerNumber having sum(amount) > 100000
 
 33. Fetch customer wise number of payments made of those customers who have made more than 3 payments
-    SQL:
+    SQL:  select customerNumber,count(*) from payments group by customerNumber having count(*)>3
 
 34. Fetch country name and number of customers from each country where there are more than 5 customers
-    SQL:
+    SQL: select country, count(*) from customers group by country having count(*)>5
 
 JOINS
-
 SQL Join is used to fetch and display data from multiple tables in single select statement
+
 
 35. Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise ascending order
     SQL:
