@@ -220,7 +220,13 @@ SQL Join is used to fetch and display data from multiple tables in single select
 
 
 35. Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise ascending order
-    SQL:
+    SQL: 
+        select customerNumber, customerName, city, state, country from customers order by customerNumber 
+
+        select orderNumber, orderDate, status from orders 
+
+    let us combine them 
+    select c.customerNumber, customerName, city, state, country, orderNumber, orderDate, status from customers c, orders o  where c.customerNumber = o.customerNumber order by c.customerNumber 
 
 36. Fetch customerNumber, customerName, city, state, country and paymentDate, amount of each and every customer and display them payment date wise
     SQL:
